@@ -203,9 +203,9 @@
                           </td>
 
                           <td class="dashboard-table__data">
+                          <form action="" method="POST">
+                            @csrf
                             <div class="d-flex">
-                              <form action="" method="POST">
-                                @csrf
                               <select
                                 class="form-control font-12"
                                 name="payment_confirm"
@@ -224,8 +224,8 @@
                               <button class="btn btn-toolbar ml-2 p-2">
                                 ✓
                               </button>
-                              <form>
-                            </div>
+                             </div>
+                            <form>
                           </td>
                           <td
                           @if($payment['status'] == 'Pending')
