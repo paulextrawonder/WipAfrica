@@ -37,7 +37,7 @@ class CreateUsersTable extends Migration
             $table->string('bank_account_no')->nullable();
             $table->string('bank_name')->nullable();
             $table->string('bank_beneficiary_name')->nullable();
-            $table->boolean('is_active')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });
