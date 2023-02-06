@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\user;
+namespace App\Http\Controllers\User;
 
 use App\Helpers\Downline;
 use App\Helpers\Referer;
@@ -13,11 +13,6 @@ use Illuminate\Support\Facades\Auth;
 
 class RefererController extends Controller
 {
-    public function __construct()
-    {
-        $this->referer = new Referer;
-        $this->user_status = new UserStatus;
-    }
 
     public function index()
     {
