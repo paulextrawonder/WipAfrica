@@ -1,0 +1,405 @@
+.project {
+  &__item {
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+    box-shadow: -4px 3px 15px rgba(0, 0, 0, 0.11);
+    overflow: hidden;
+  }
+  &__interest-icon {
+    position: absolute;
+    top: 0.8rem;
+    right: 2.6rem;
+    z-index: 1000;
+  }
+  &__unfavorite,
+  &__favorite {
+    font-size: 1.2rem !important;
+  }
+  &__favorite {
+    color: #f5a31c !important;
+  }
+  &__thumbnail {
+    width: 100%;
+    height: 8.9rem;
+    margin: 0;
+    object-fit: cover;
+  }
+  &__content-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+  &__estates {
+    display: inline-block;
+    font-size: 10px;
+    color: $color-white;
+    background: $color-primary;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem 0rem 0rem 0rem;
+  }
+  &__heading {
+    font-family: "poppins";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: $color-secondary-dark;
+    margin: 0;
+    padding: 0;
+  }
+  &__paragraph {
+    font-family: "poppins";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: $color-primary;
+    margin: 0;
+    padding: 0;
+    //margin-right: 1rem;
+  }
+  &__estate {
+    padding: 0.3rem 1rem;
+    background: #e6edff;
+    border-radius: 32px;
+    margin: 0;
+    width: 50%;
+    margin-left: 1rem;
+    @include respond(tab-port) {
+      width: 35%;
+    }
+
+    @include respond(phone) {
+      font-size: 11px;
+      width: 55%;
+    }
+  }
+
+  &__count {
+    border-top: 1px solid #e8e8e8;
+    padding: 0.7rem 1.3rem;
+    padding-left: 0.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.4rem;
+    &-item {
+      margin-right: 1rem;
+      margin-left: 0;
+    }
+    &--icon {
+      height: 1.1rem;
+    }
+    &--text {
+      margin: 0;
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      color: #434343;
+    }
+  }
+
+  &__filter {
+    @include respond(phone) {
+      order: -2;
+      margin-bottom: 1rem;
+    }
+    &-box {
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+    }
+    &-form {
+      padding: 1rem 1.2rem;
+
+      @include respond(phone) {
+        display: flex;
+        overflow: scroll;
+        align-items: flex-end !important;
+      }
+    }
+
+    &-field {
+      @include respond(phone) {
+        flex: 0 0 50% !important;
+        margin-right: 1rem !important;
+      }
+    }
+    &-btn {
+      @include respond(phone) {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+
+  &__title {
+    &-box {
+      background: #f3f5fa;
+      padding: 1rem;
+    }
+    &-heading {
+      font-family: "poppins";
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-secondary-dark;
+      margin: 0;
+    }
+  }
+  &__back-btn {
+    font-family: "poppins";
+    text-transform: none;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: $color-primary;
+
+    &:hover {
+      color: $color-secondary !important;
+    }
+  }
+  &__prospect {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: #70a6e8;
+    border-radius: 2px;
+  }
+
+  &__features {
+    background: #f3f5fa;
+    border: 1px solid #e8e8e8;
+    padding: 0.8rem 1rem;
+    justify-content: space-between;
+    width: 37%;
+    margin-top: 1rem;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+    }
+
+    &--item {
+      margin-right: 1.2rem;
+    }
+
+    &--icon {
+      align-self: center;
+      height: 1.1rem !important;
+      font-size: 1.1rem !important;
+      color: #696969;
+      fill: #696969;
+    }
+    &--text {
+      display: block;
+      margin: 0;
+      font-family: "poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      color: #434343;
+      text-align: center;
+      margin-top: 5px;
+    }
+  }
+
+  &__details {
+    border: 1px solid #e8e8e8;
+    margin-top: 1.5rem;
+    &--heading {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e8e8e8;
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      text-transform: capitalize;
+      color: $color-secondary;
+    }
+    &--body {
+      padding: 1.2rem;
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 0.9rem;
+      line-height: 22px;
+      text-transform: capitalize;
+      color: #000000;
+    }
+    &--btn-box {
+      padding: 1.2rem;
+      @include respond(phone) {
+        flex-direction: column;
+      }
+    }
+    &--btn {
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+      text-transform: capitalize;
+      color: #ffffff;
+      padding: 0.8rem 5rem;
+      border-radius: 2px;
+      @include respond(tab-land) {
+        padding: 0.8rem 2rem;
+      }
+
+      &:first-child {
+        margin-right: 1.5rem;
+        @include respond(phone) {
+          margin-right: 0rem !important;
+          margin-bottom: 0.8rem !important;
+        }
+      }
+      &:last-child {
+        background: #ffffff !important;
+        border: 1px solid $color-secondary !important;
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__info {
+    @include respond(phone) {
+      margin: 0;
+      margin-top: 1.3rem;
+      padding: 0;
+    }
+    &-box {
+      padding: 1rem 1.2rem;
+    }
+    &--heading {
+      font-family: "poppins";
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+      color: $color-primary;
+    }
+    &--text {
+      font-family: "poppins";
+      font-weight: 600;
+      font-size: 0.78rem;
+      line-height: 18px;
+      color: #535353;
+    }
+  }
+  &__prospect {
+    &--header {
+      border-bottom: 1.5px solid #e8e8e8;
+      padding-top: 0.8rem;
+    }
+    &--title {
+      font-family: "poppins";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 29px;
+      color: #000000;
+    }
+  }
+}
+
+.project__swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  @include respond(phone) {
+    height: 11.5rem;
+  }
+
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    background-size: cover;
+    background-position: center;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+      @include respond(phone) {
+        height: 11.5rem;
+      }
+    }
+  }
+}
+
+.project__slider2 {
+  width: 100%;
+}
+
+.project__slider {
+  box-sizing: border-box;
+  padding: 10px 0;
+  height: 64px;
+  margin-top: 10px;
+
+  .project__swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+
+// .swiper-button-next:after,
+// .swiper-button-prev:after {
+//   font-family: swiper-icons;
+//   font-size: 1rem;
+//   padding: 0.59rem 0.8rem;
+//   background: #000000;
+//   opacity: 0.5;
+//   border-radius: 100%;
+// }
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #f7f7f7;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: $color-secondary;
+}

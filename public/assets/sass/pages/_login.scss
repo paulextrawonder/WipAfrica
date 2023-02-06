@@ -1,0 +1,89 @@
+.login {
+  &__container {
+    display: flex;
+    align-items: stretch;
+    min-height: 90vh;
+    overflow: hidden;
+    margin: 0;
+    &-img {
+      background: linear-gradient(
+          180deg,
+          rgba($color-primary, 0.76) 7.32%,
+          rgba(26, 48, 66, 0.739556) 51.79%,
+          rgba(25, 40, 52, 0.8) 68.31%
+        ),
+        url(../img/bg-login.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      flex: 0 0 38%;
+      min-height: 92vh;
+      margin: 0;
+
+      @include respond(tab-port) {
+        flex: 0 0 30%;
+        min-height: 93vh;
+      }
+      @include respond(phone) {
+        flex: 0 0 5%;
+        min-height: 96vh;
+      }
+    }
+    &-form {
+      flex: 0 0 62%;
+      padding: 6rem 14%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      @include respond(tab-port) {
+        flex: 0 0 70%;
+        padding: 4rem 8%;
+      }
+      @include respond(phone) {
+        flex: 0 0 95%;
+        padding: 4rem 8%;
+      }
+    }
+  }
+  &__logo {
+    width: 15rem;
+    margin: 0 auto;
+    @include respond(phone) {
+      width: 12rem;
+    }
+  }
+  &__title {
+    font-family: "poppins";
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    color: $color-text;
+    margin: 1.3rem 0rem;
+
+    &--primary {
+      color: $color-primary;
+      font-size: 2.1rem;
+      margin: 2rem 0rem;
+      margin-bottom: 1rem;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
+      line-height: 3.5rem;
+    }
+  }
+  &__form-img {
+    position: absolute;
+    opacity: 0.1;
+    bottom: -2rem;
+    right: 0;
+    z-index: -1;
+    height: 60vh;
+    @include respond(phone) {
+      height: 38vh;
+      bottom: 0rem;
+    }
+  }
+}

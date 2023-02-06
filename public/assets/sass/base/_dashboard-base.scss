@@ -1,0 +1,140 @@
+body {
+  font-family: "poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa !important;
+}
+
+.dark-sidebar .main-sidebar .sidebar-brand {
+  background-color: $color-white;
+}
+.dark-sidebar .main-sidebar {
+  background-color: $color-white;
+}
+.navbar {
+  background-color: $color-white;
+}
+
+.main-content {
+  background-color: #fff;
+}
+.dark-sidebar .main-sidebar .sidebar-menu li a {
+  color: $color-primary;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 21px;
+  font-family: "Poppins", sans-serif !important;
+  i {
+    font-size: 0.9rem !important;
+  }
+}
+.dark-sidebar .main-sidebar .sidebar-menu li a:hover {
+  background: linear-gradient(to right, $color-secondary 98%, $color-accent 2%);
+  color: $color-white;
+}
+.dark-sidebar .main-sidebar .sidebar-menu .dropdown .dropdown-menu li a:hover {
+  background: transparent;
+  color: $color-secondary;
+}
+.dark-sidebar .main-sidebar .sidebar-menu li.active a {
+  background: linear-gradient(to right, $color-primary 98%, $color-accent 2%);
+  color: $color-white;
+}
+.dark-sidebar .main-sidebar .sidebar-menu li a i {
+  font-size: 1.2rem !important;
+}
+.dark-sidebar .main-sidebar .sidebar-menu li .awesome i {
+  font-size: 1rem !important;
+}
+
+#nav__dropdown {
+  color: $color-primary;
+  font-weight: 500;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.dark-sidebar:not(.sidebar-mini)
+  .sidebar-style-2
+  .sidebar-menu
+  > li.active
+  ul.dropdown-menu
+  li
+  a {
+  background: #fff !important;
+}
+.navbar {
+  border-bottom: 1px solid #00000017;
+}
+.header-logo {
+  height: 6.8rem !important;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+.section-body {
+  min-height: 88vh;
+}
+
+.dropdown-item:hover {
+  color: $color-primary !important;
+}
+.user-welcome {
+  color: $color-primary;
+  font-weight: 500;
+}
+div.table-responsive
+  > div.dataTables_wrapper
+  > div.row
+  > div[class^="col-"]:last-child {
+  @include respond(phone) {
+    padding-left: 0;
+  }
+}
+
+div.dataTables_wrapper div.dataTables_length {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+  @include respond(phone) {
+    text-align: left;
+  }
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+  @include respond(phone) {
+    margin-top: 1rem;
+  }
+}
+
+.theme-white .page-item.active .page-link {
+  color: #fff;
+  background-color: $color-primary;
+  border-color: $color-secondary;
+}
+
+.theme-white .page-item.disabled .page-link {
+  color: $color-primary;
+}

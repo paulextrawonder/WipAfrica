@@ -1,0 +1,36 @@
+.dashboard {
+  &__title {
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 44px;
+    color: $color-text;
+  }
+}
+
+.text-title {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: $color-white;
+
+  @include respond(phone) {
+    font-size: 0.8rem;
+  }
+}
+
+.text-primary {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 24px;
+  color: $color-white;
+  @include respond(phone) {
+    font-size: 0.6rem;
+    line-height: 15px;
+    padding-right: 2.3rem;
+  }
+}

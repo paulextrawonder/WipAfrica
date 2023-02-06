@@ -1,0 +1,31 @@
+.d-flex-h-center {
+  display: flex;
+  justify-content: center;
+}
+
+#phone-visble {
+  display: none;
+  visibility: hidden;
+
+  @include respond(phone) {
+    display: block;
+    visibility: visible;
+    margin: 0.5rem;
+  }
+}
+
+.color-red {
+  color: red !important;
+  font-size: 1.3rem !important;
+}
+
+.bg__secondary {
+  background-color: $color-primary !important;
+}
+
+.ticket-padding {
+  @include respond(phone) {
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+}

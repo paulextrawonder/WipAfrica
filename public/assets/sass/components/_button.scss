@@ -1,0 +1,71 @@
+.main-btn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 21px;
+  color: $color-white;
+  text-align: center;
+  background: $color-primary;
+  text-decoration: none;
+  padding: 1.2rem 7rem;
+  display: inline-block;
+  margin-top: 1rem;
+  border: 0;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  &-100 {
+    width: 100%;
+  }
+  &:hover {
+    background-color: $color-secondary !important;
+    color: #fff !important;
+  }
+}
+
+.link-text {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 26px;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  text-decoration-line: underline;
+  color: $color-primary;
+}
+
+.btn-primary {
+  background: $color-secondary !important;
+}
+
+.theme-white .btn-primary:hover {
+  background: $color-primary !important;
+}
+
+// .theme-white .btn-primary:active {
+//   background: $color-primary !important;
+// }
+// .theme-white .btn-primary:visited {
+//   background: $color-primary !important;
+// }
+
+.btn {
+  &__project {
+    border: none;
+    background: transparent;
+    color: $color-primary;
+    margin-top: 0.7rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all ease-out 0.8s;
+
+    &:hover {
+      color: $color-secondary;
+      text-decoration: underline;
+    }
+  }
+}
+
+.theme-white .swal-button.swal-button--confirm {
+  background-color: $color-primary;
+}

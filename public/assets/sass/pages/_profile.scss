@@ -1,0 +1,27 @@
+.pro_pics {
+  width: 100%;
+
+  @include respond(tab-land) {
+    width: 50%;
+  }
+}
+#eye-open2 {
+  display: none;
+}
+
+.form {
+  &__icon {
+    &--eye {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #423f3f;
+    }
+  }
+}
+
+#eye-open {
+  display: none;
+}

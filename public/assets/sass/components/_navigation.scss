@@ -1,0 +1,55 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 5rem;
+  &__logo {
+    height: 7.5rem;
+  }
+
+  &__items {
+    display: flex;
+    list-style: none;
+  }
+  &__list {
+    margin-right: 4rem;
+  }
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    transition: all ease-out 0.4s;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__btn {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.7rem;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    color: $color-white;
+    border: 1px solid $color-white;
+    text-decoration: none;
+    text-align: center;
+    transition: all ease-out 0.4s;
+
+    @include respond(phone) {
+      padding: 0.3rem 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-secondary;
+      border: 1px solid $color-secondary;
+    }
+  }
+}

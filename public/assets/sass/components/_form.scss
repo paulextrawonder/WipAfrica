@@ -1,0 +1,117 @@
+.form {
+  &__group {
+    margin-bottom: 1.5rem;
+    @include respond(smallphone) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $color-text;
+    display: block;
+    margin-bottom: 0.5rem;
+
+    &--2 {
+      font-weight: 500;
+      margin-top: 0.3rem;
+
+      &-center {
+        text-align: center;
+      }
+      .label-link {
+        font-weight: 600;
+        color: $color-primary;
+        text-decoration: none;
+        cursor: pointer;
+        transition: text-decoration ease-out 0.5s;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &--3 {
+      margin-top: 0.3rem;
+      font-weight: 600;
+      span {
+        color: $color-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+  &__input {
+    border: 1px solid $color-primary;
+    border-radius: 8px;
+    padding: 1.3rem 0.5rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $color-text;
+    width: 100%;
+    padding-left: 1rem;
+
+    @include respond(smallphone) {
+      padding: 1rem 0.5rem;
+    }
+    &--reg {
+      border: none;
+      border-bottom: 2px solid #c4c4c4;
+      background: #f8f8f8;
+      border-radius: 2px;
+    }
+
+    &--submit {
+      display: none;
+      visibility: hidden;
+    }
+
+    &:focus {
+      border: 1px solid $color-secondary;
+      outline: 3px solid transparent;
+    }
+
+    option {
+      color: $color-text;
+      cursor: pointer;
+    }
+  }
+
+  select {
+    cursor: pointer;
+    padding: 1.6rem 1rem !important;
+    @include respond(smallphone) {
+      padding: 1.3rem 1rem !important;
+    }
+  }
+}
+
+::placeholder {
+  font-family: "poppins";
+  font-weight: 500;
+  font-size: 1.27rem;
+  color: rgba(84, 130, 53, 0.5);
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+.hide {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.email-card {
+  padding: 4rem 3rem;
+  background: #fff;
+  border: 1px solid #f5f5f5;
+  box-shadow: -1rem 1rem 2rem rgba(0, 0, 0, 0.05);
+  border-radius: 1.2rem;
+
+  @include respond(phone) {
+    padding: 2.5rem 2rem;
+  }
+}

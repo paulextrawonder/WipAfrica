@@ -1,0 +1,54 @@
+.header {
+  padding: 1.3rem 5rem;
+  background-color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(38, 138, 219, 0.15);
+
+  @include respond(phone) {
+    padding: 1.5rem 2rem;
+  }
+  &__logo {
+    height: 5rem;
+
+    @include respond(phone) {
+      height: 3.5rem;
+    }
+  }
+  &__btn {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $color-secondary;
+    padding: 0.5rem 2rem;
+    border: 1px solid $color-secondary;
+    text-decoration: none;
+    text-align: center;
+    transition: all ease-out 0.4s;
+
+    @include respond(phone) {
+      padding: 0.3rem 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-secondary;
+    }
+  }
+
+  &__2 {
+    background: linear-gradient(
+        111.11deg,
+        rgba(4, 39, 66, 0.65) 84.43%,
+        rgba(0, 0, 0, 0) 180.06%
+      ),
+      url(../img/main-image.png);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+  }
+}

@@ -1,0 +1,32 @@
+.notification {
+  //   @include respond(phone) {
+  //     flex-direction: column;
+  //   }
+  &__initials {
+    background: $color-primary;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 0.9rem;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 1rem;
+
+    @include respond(phone) {
+      //   text-align: left !important;
+      //   margin-bottom: 0.5rem;
+      display: none;
+    }
+  }
+
+  &__title {
+    color: $color-secondary-dark;
+  }
+  &__body {
+    color: $color-primary;
+  }
+}
