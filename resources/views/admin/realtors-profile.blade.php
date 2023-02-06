@@ -73,7 +73,7 @@
                           <p class="details__text details__text-bold font-14">
                             Number Of Sales
                           </p>
-                          <p class="details__text font-13">30</p>
+                          <p class="details__text font-13">--</p>
                         </div>
                         <div class="details__text-box">
                           <p class="details__text details__text-bold font-14">
