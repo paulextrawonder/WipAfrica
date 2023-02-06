@@ -15,7 +15,7 @@ use App\Http\Controllers\SupportController;
 use App\Http\Controllers\User\DashboardConstroller;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\PropertyController;
-use App\Http\Controllers\user\RefererController;
+use App\Http\Controllers\User\RefererController;
 use App\Notifications\NoReplyNotification;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
