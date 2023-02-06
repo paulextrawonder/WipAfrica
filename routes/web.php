@@ -33,13 +33,17 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify'=>true]);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [DashboardConstroller::class, 'index'])->name('user.dashboard');
+
 
 //users
 Route::group(['prefix'=>'user'], function(){
     Route::group(['middleware'=> ['auth', 'verified']], function(){
+         Route::get('/dashboard', [DashboardConstroller::class, 'index'])->name('user.dashboard');
          Route::get('/dashboard', [DashboardConstroller::class, 'index'])->name('user.dashboard');
          Route::get('/profile', [ProfileController::class, 'getProfile'])->name('user.getProfile');
          Route::patch('/profile', [ProfileController::class, 'saveProfile'])->name('user.saveProfile');
