@@ -39,7 +39,7 @@ Route::get('/', function () {
 
 //users
 Route::group(['prefix'=>'user'], function(){
-    Route::group(['middleware'=> ['auth', 'verified']], function(){
+    Route::group(['middleware'=> ['auth', 'verified', 'is_blocked']], function(){
          Route::get('/dashboard', [DashboardConstroller::class, 'index'])->name('user.dashboard');
          Route::get('/profile', [ProfileController::class, 'getProfile'])->name('user.getProfile');
          Route::patch('/profile', [ProfileController::class, 'saveProfile'])->name('user.saveProfile');
