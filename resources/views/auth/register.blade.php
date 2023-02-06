@@ -4,8 +4,22 @@
     <title>Onboarding | WBN</title>
     @include('user.include.header')
     <link rel="stylesheet" href="../../assets/css/main.min.css" />
+    <style>
+    #loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85) url("{{asset('assets/img/loader.gif')}}") no-repeat center center;
+    z-index: 99999;
+}
+    </style>
   </head>
   <body>
+  <div id='loader'></div>
     <header class="header">
       <a href="../public/index.html"
         ><img src="../../assets/img/logo.png" alt="" class="header__logo"
@@ -181,4 +195,11 @@
       </div>
     </main>
  @include('user.include.footer')
+ <script>
+        $(function() {
+        $( "form" ).submit(function() {
+        $('#loader').show();
+        });
+        });
+        </script>
 </html>
