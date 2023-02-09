@@ -37,6 +37,10 @@
     background: $color-primary;
     padding: 0.5rem 0.8rem;
     margin: 0.5rem 0rem 0rem 0rem;
+
+    @include respond(phone) {
+      font-size: 0.85rem !important;
+    }
   }
   &__heading {
     font-family: "poppins";
@@ -47,6 +51,10 @@
     color: $color-secondary-dark;
     margin: 0;
     padding: 0;
+
+    @include respond(phone) {
+      font-size: 0.9rem !important;
+    }
   }
   &__paragraph {
     font-family: "poppins";
@@ -58,6 +66,9 @@
     margin: 0;
     padding: 0;
     //margin-right: 1rem;
+    @include respond(phone) {
+      font-size: 0.9rem !important;
+    }
   }
   &__estate {
     padding: 0.3rem 1rem;
@@ -145,6 +156,10 @@
       line-height: 19px;
       color: $color-secondary-dark;
       margin: 0;
+
+      @include respond(phone) {
+        font-size: 1rem !important;
+      }
     }
   }
   &__back-btn {
@@ -154,6 +169,10 @@
     font-size: 13px;
     line-height: 18px;
     color: $color-primary;
+
+    @include respond(phone) {
+      font-size: 1.1rem !important;
+    }
 
     &:hover {
       color: $color-secondary !important;
@@ -227,6 +246,10 @@
       line-height: 22px;
       text-transform: capitalize;
       color: $color-secondary;
+
+      @include respond(phone) {
+        font-size: 1.2rem !important;
+      }
     }
     &--body {
       padding: 1.2rem;
@@ -236,6 +259,11 @@
       line-height: 22px;
       text-transform: capitalize;
       color: #000000;
+
+      @include respond(phone) {
+        font-size: 1.1rem !important;
+        line-height: 1.6;
+      }
     }
     &--btn-box {
       padding: 1.2rem;
@@ -255,6 +283,10 @@
       border-radius: 2px;
       @include respond(tab-land) {
         padding: 0.8rem 2rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1rem !important;
       }
 
       &:first-child {
@@ -287,6 +319,11 @@
       font-size: 12px;
       line-height: 14px;
       color: $color-primary;
+
+      @include respond(phone) {
+        font-size: 1rem !important;
+        line-height: 1.5;
+      }
     }
     &--text {
       font-family: "poppins";
@@ -294,6 +331,11 @@
       font-size: 0.78rem;
       line-height: 18px;
       color: #535353;
+
+      @include respond(phone) {
+        font-size: 1rem !important;
+        line-height: 1.5;
+      }
     }
   }
   &__prospect {
@@ -402,4 +444,11 @@
 .swiper-pagination-bullet-active {
   color: #fff;
   background: $color-secondary;
+}
+
+.name {
+  @include respond(phone) {
+    font-size: 1rem !important;
+    line-height: 1.7;
+  }
 }

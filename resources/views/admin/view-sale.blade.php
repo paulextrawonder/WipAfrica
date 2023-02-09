@@ -170,6 +170,8 @@
                       <tbody>
                         @foreach($data['payments'] as $payment)
                         <tr>
+                        <form action="{{route('confirmSale')}}" method="POST">
+                          @csrf
                           <td class="dashboard-table__data">
                             <p
                               class="dashboard-table__text d-block font-weight-600 font-12"
@@ -201,14 +203,15 @@
                               >{{$payment['created_at']->format('h:sa')}}</span
                             >
                           </td>
-
                           <td class="dashboard-table__data">
-                          <form action="" method="POST">
-                            @csrf
+                            <input type="hidden" name="payment_id" value="{{$payment['id']}}">
+                            <input type="hidden" name="user_id" value="{{$data['realtor']['id']}}">
+                            <input type="hidden" name="commission_percent" value="{{$payment['commission']}}">
+                            <input type="hidden" name="commission" value="{{$payment['commission']}}">
                             <div class="d-flex">
                               <select
                                 class="form-control font-12"
-                                name="payment_confirm"
+                                name="action"
                                 id="sales_commission"
                                 @if($payment['status'] == 'Confirmed')
                                 disabled
@@ -221,11 +224,10 @@
                                 <option value="Confirmed">Confirm</option>
                                 <option value="Declined">Decline</option>
                               </select>
-                              <button class="btn btn-toolbar ml-2 p-2">
+                              <button type="submit" class="btn btn-toolbar ml-2 p-2">
                                 ✓
                               </button>
                              </div>
-                            <form>
                           </td>
                           <td
                           @if($payment['status'] == 'Pending')
@@ -239,6 +241,7 @@
                           >
                           {{$payment['status']}}
                           </td>
+                        </form>
                         </tr>
                         @endforeach
                       </tbody>

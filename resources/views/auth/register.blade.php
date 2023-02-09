@@ -21,10 +21,10 @@
   <body>
   <div id='loader'></div>
     <header class="header">
-      <a href="../public/index.html"
+      <a href="https://wipafricabusinessnetwork.com/"
         ><img src="../../assets/img/logo.png" alt="" class="header__logo"
       /></a>
-      <a href="#" class="header__btn">My Account</a>
+      <a href="{{route('login')}}" class="header__btn">My Account</a>
     </header>
     <main class="main">
       <div class="inspection__container">

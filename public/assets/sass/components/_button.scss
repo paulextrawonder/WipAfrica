@@ -59,6 +59,10 @@
     font-size: 0.8rem;
     transition: all ease-out 0.8s;
 
+    @include respond(phone) {
+      font-size: 1rem !important;
+    }
+
     &:hover {
       color: $color-secondary;
       text-decoration: underline;
@@ -68,4 +72,10 @@
 
 .theme-white .swal-button.swal-button--confirm {
   background-color: $color-primary;
+}
+
+.bg-main {
+  @include respond(phone) {
+    font-size: 0.9rem !important;
+  }
 }

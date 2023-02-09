@@ -105,7 +105,7 @@ class PropertyController extends Controller
         return back()->with('error', $e->getMessage());
        }
 
-       $users = User::whereNotNull('email_verified_at')->get();
+       $users = User::whereNotNull('email_verified_at')->where('is_active', true)->get();
        foreach ($users as $user) {
         Mail::to($user->email)->send(new NewProjectMail($user->first_name, $data));
        }

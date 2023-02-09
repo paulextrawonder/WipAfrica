@@ -12,7 +12,7 @@ class Downline
 
     public function __construct()
      {
-         $this->user_status = new UserStatus;
+         //$this->user_status = new UserStatus;
      }
 
      public function createDownline($user)

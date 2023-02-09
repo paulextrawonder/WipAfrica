@@ -34,6 +34,10 @@ body {
   font-size: 13px;
   line-height: 21px;
   font-family: "Poppins", sans-serif !important;
+  @include respond(phone) {
+    font-size: 1rem;
+  }
+
   i {
     font-size: 0.9rem !important;
   }
@@ -62,6 +66,10 @@ body {
   font-weight: 500;
   font-size: 0.7rem;
   line-height: 1.1rem;
+
+  @include respond(phone) {
+    font-size: 0.9rem;
+  }
 
   &:hover {
     color: $color-secondary;
@@ -137,4 +145,41 @@ div.dataTables_wrapper div.dataTables_paginate {
 
 .theme-white .page-item.disabled .page-link {
   color: $color-primary;
+}
+
+.row .position-relative img {
+  @include respond(phone) {
+    height: 150px !important;
+    right: -0.3rem !important;
+  }
+}
+
+.main-content .section .section-body .row .col-md-8 {
+  @include respond(phone) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 20px;
+  }
+}
+
+.main-content .section .section-body .row .col-md-4 {
+  @include respond(phone) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 20px;
+  }
+}
+
+.main-content .section .section-body .row .col-12 {
+  @include respond(phone) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 20px;
+  }
+}
+
+.navbar-nav li .collapse-btn i {
+  @include respond(phone) {
+    font-size: 1.6rem !important;
+  }
 }

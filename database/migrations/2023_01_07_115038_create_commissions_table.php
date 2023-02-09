@@ -15,6 +15,13 @@ class CreateCommissionsTable extends Migration
     {
         Schema::create('commissions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('sale_id');
+            $table->unsignedBigInteger('payment_id');
+            $table->string('amount_paid');
+            $table->string('commission');
+            $table->string('percentage_commission');
+            $table->string('commission_type');
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

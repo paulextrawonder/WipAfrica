@@ -25,3 +25,11 @@
 #eye-open {
   display: none;
 }
+
+.form__label,
+.form__text {
+  @include respond(phone) {
+    font-size: 0.9rem !important;
+    line-height: 1.7;
+  }
+}

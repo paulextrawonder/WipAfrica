@@ -34,7 +34,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @media only screen and (max-width: 37.5em) {
   .text-title {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
 
@@ -49,8 +50,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @media only screen and (max-width: 37.5em) {
   .text-primary {
-    font-size: 0.6rem;
-    line-height: 15px;
+    font-size: 0.7rem;
+    line-height: 1.5;
     padding-right: 2.3rem;
   }
 }
@@ -152,6 +153,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   transition: all ease-out 0.8s;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .btn__project {
+    font-size: 1rem !important;
+  }
+}
+
 .btn__project:hover {
   color: #859457;
   text-decoration: underline;
@@ -159,6 +166,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .theme-white .swal-button.swal-button--confirm {
   background-color: #548235;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .bg-main {
+    font-size: 0.9rem !important;
+  }
 }
 
 .notification__initials {
@@ -192,8 +205,36 @@ ORDER: Base + typography > general layout + grid > page layout > components
   color: #1d2b12;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .notification__title {
+    font-size: 1.1rem !important;
+    line-height: 1.8;
+  }
+}
+
 .notification__body {
   color: #548235;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .notification__body {
+    font-size: 1rem !important;
+    line-height: 1.8;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading__primary--h6 {
+    font-size: 1.3rem !important;
+    line-height: 1.8;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .card .heading__primary--h6 {
+    font-size: 1.3rem !important;
+    line-height: 1.5 !important;
+  }
 }
 
 body {
@@ -239,6 +280,12 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .dark-sidebar .main-sidebar .sidebar-menu li a {
+    font-size: 1rem;
+  }
+}
+
 .dark-sidebar .main-sidebar .sidebar-menu li a i {
   font-size: 0.9rem !important;
 }
@@ -273,6 +320,12 @@ body {
   font-weight: 500;
   font-size: 0.7rem;
   line-height: 1.1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  #nav__dropdown {
+    font-size: 0.9rem;
+  }
 }
 
 #nav__dropdown:hover {
@@ -355,6 +408,43 @@ a {
   color: #548235;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .row .position-relative img {
+    height: 150px !important;
+    right: -0.3rem !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .main-content .section .section-body .row .col-md-8 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .main-content .section .section-body .row .col-md-4 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .main-content .section .section-body .row .col-12 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .navbar-nav li .collapse-btn i {
+    font-size: 1.6rem !important;
+  }
+}
+
 .dashboard__card {
   padding: 1.2rem;
   background: #ffffff;
@@ -391,6 +481,13 @@ a {
   line-height: 1rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .dashboard__text {
+    font-weight: 400;
+    font-size: 1rem !important;
+  }
+}
+
 .dashboard__heading {
   font-family: "poppins";
   font-style: normal;
@@ -398,6 +495,12 @@ a {
   font-size: 1.6rem;
   line-height: 55px;
   color: #333333;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .dashboard__heading {
+    font-size: 1.2rem !important;
+  }
 }
 
 .dashboard__icon-box {
@@ -415,6 +518,12 @@ a {
   color: #548235 !important;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .dashboard-table__heading {
+    font-size: 0.9rem;
+  }
+}
+
 .dashboard-table__text {
   font-style: normal;
   font-weight: 400;
@@ -424,10 +533,28 @@ a {
   color: #333333 !important;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .dashboard-table__text {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .dashboard-table__text a {
+    font-size: 0.9rem !important;
+  }
+}
+
 .dashboard-table__text-link {
   color: #548235 !important;
   font-weight: 700;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .dashboard-table__data {
+    font-size: 0.95rem !important;
+  }
 }
 
 .dashboard-table__span {
@@ -437,6 +564,12 @@ a {
   color: #333333;
   display: block;
   margin-top: -1.1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .dashboard-table__span {
+    font-size: 0.9rem !important;
+  }
 }
 
 .details__btn-back {
@@ -464,6 +597,13 @@ a {
   color: #000000;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .details__text {
+    font-weight: 400;
+    font-size: 1.1rem !important;
+  }
+}
+
 .details__text-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,10 +627,18 @@ a {
 
 @media only screen and (max-width: 37.5em) {
   .details__text-bold {
+    font-weight: 500;
+    font-size: 1.1rem !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .details__text-bold {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     font-weight: 600;
+    font-size: 1rem;
   }
 }
 
@@ -523,6 +671,14 @@ a {
   margin: 0;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .wallet__title {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0.3rem 0rem;
+  }
+}
+
 .wallet__line {
   height: 3px;
   width: 100%;
@@ -550,6 +706,12 @@ a {
   color: #1d2b12;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .wallet__amount {
+    font-size: 1rem;
+  }
+}
+
 .profile__box {
   background: #eaf4ca;
   border: 1px solid #e8e8e8;
@@ -570,8 +732,13 @@ a {
 }
 
 .profile__pics {
-  height: 3.5rem;
+  height: 3.8rem !important;
+  width: 3.8rem !important;
   border-radius: 50%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .profile__pics-box {
@@ -592,6 +759,12 @@ a {
   margin-top: 0.8rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .profile__name {
+    font-size: 1.14rem !important;
+  }
+}
+
 .profile__type {
   font-family: "poppins";
   font-weight: 500;
@@ -604,6 +777,13 @@ a {
   text-align: center;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .profile__type {
+    font-size: 1rem !important;
+    line-height: 1.7;
+  }
+}
+
 .profile__id {
   font-weight: 400;
   font-size: 12px;
@@ -611,6 +791,12 @@ a {
   text-align: center;
   letter-spacing: -0.02em;
   color: #7f7f7f;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .profile__id {
+    font-size: 1rem !important;
+  }
 }
 
 .profile__icon {
@@ -634,6 +820,12 @@ a {
   padding: 0;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .profile__stat--box-h1 {
+    font-size: 1.4rem !important;
+  }
+}
+
 .profile__stat--box-p {
   font-family: "poppins";
   font-weight: 400;
@@ -644,6 +836,56 @@ a {
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .profile__stat--box-p {
+    font-size: 0.85rem !important;
+    line-height: 1.7;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about .name {
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about .text-muted {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .view-mail p {
+    font-weight: 400;
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .attachment-mail span {
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+.navbar-nav li .nav-link-user img {
+  border-radius: 100%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  width: 2.2rem !important;
+  height: 2.2rem !important;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-body {
+    padding-top: 1.3rem;
+  }
 }
 
 .pro_pics {
@@ -671,6 +913,14 @@ a {
 
 #eye-open {
   display: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .form__label,
+  .form__text {
+    font-size: 0.9rem !important;
+    line-height: 1.7;
+  }
 }
 
 .project__item {
@@ -726,6 +976,12 @@ a {
   margin: 0.5rem 0rem 0rem 0rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .project__estates {
+    font-size: 0.85rem !important;
+  }
+}
+
 .project__heading {
   font-family: "poppins";
   font-weight: 600;
@@ -737,6 +993,12 @@ a {
   padding: 0;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .project__heading {
+    font-size: 0.9rem !important;
+  }
+}
+
 .project__paragraph {
   font-family: "poppins";
   font-weight: 500;
@@ -746,6 +1008,12 @@ a {
   color: #548235;
   margin: 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project__paragraph {
+    font-size: 0.9rem !important;
+  }
 }
 
 .project__estate {
@@ -863,6 +1131,12 @@ a {
   margin: 0;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .project__title-heading {
+    font-size: 1rem !important;
+  }
+}
+
 .project__back-btn {
   font-family: "poppins";
   text-transform: none;
@@ -870,6 +1144,12 @@ a {
   font-size: 13px;
   line-height: 18px;
   color: #548235;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project__back-btn {
+    font-size: 1.1rem !important;
+  }
 }
 
 .project__back-btn:hover {
@@ -957,6 +1237,12 @@ a {
   color: #859457;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .project__details--heading {
+    font-size: 1.2rem !important;
+  }
+}
+
 .project__details--body {
   padding: 1.2rem;
   font-family: "poppins";
@@ -965,6 +1251,13 @@ a {
   line-height: 22px;
   text-transform: capitalize;
   color: #000000;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project__details--body {
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+  }
 }
 
 .project__details--btn-box {
@@ -995,6 +1288,12 @@ a {
 @media only screen and (max-width: 75em) {
   .project__details--btn {
     padding: 0.8rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project__details--btn {
+    font-size: 1rem !important;
   }
 }
 
@@ -1035,12 +1334,26 @@ a {
   color: #548235;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .project__info--heading {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+}
+
 .project__info--text {
   font-family: "poppins";
   font-weight: 600;
   font-size: 0.78rem;
   line-height: 18px;
   color: #535353;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project__info--text {
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
 }
 
 .project__prospect--header {
@@ -1142,4 +1455,11 @@ a {
 .swiper-pagination-bullet-active {
   color: #fff;
   background: #859457;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .name {
+    font-size: 1rem !important;
+    line-height: 1.7;
+  }
 }

@@ -7,6 +7,7 @@ use App\Models\AddPaymentToSales;
 use App\Models\Sales;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SalesController extends Controller
 {
@@ -100,5 +101,30 @@ class SalesController extends Controller
         $data['payments'] = $payments;
 
      return view('admin.view-sale', compact('data'));
+    }
+
+    public function confirmSale(Request $request)
+    {
+        $data = $request->validate([
+            'payment_id'=>'required',
+            'user_id'=>'required',
+            'action'=>'required',
+        ]);   
+
+        if($data['action'] === 'Confirmed'){
+            $payment = AddPaymentToSales::find($data['payment_id']);
+           // return $payment;
+            if(!$payment){
+                return back()->with('error', 'Payment not found');
+            }
+            DB::transaction(function () use ($payment) {
+                $realtor = User::find($payment['user_id']);
+                $direct_referrer = User::where('ref_code', $realtor['ref_by'])->first();
+                if($direct_referrer){
+                    // todo
+                }
+            });
+
+        }
     }
 }
