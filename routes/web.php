@@ -34,7 +34,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify'=>true]);
 
 Route::get('/', function () {
-    return redirect('/login');
+    return redirect(route('login'));
 });
 
 //users
