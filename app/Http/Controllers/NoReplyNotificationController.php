@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NotificationMail;
 use App\Models\Notifier;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 
 use function PHPUnit\Framework\isEmpty;
@@ -103,6 +105,11 @@ class NoReplyNotificationController extends Controller
 
          try{
             Notifier::create($data);
+            $users = User::select('email', 'first_name', 'last_name')->get();
+
+            foreach ($users as $key => $user) {
+                Mail::to($user->email)->send(new NotificationMail($user, $data));
+            }
          }catch(Exception $e){
             return back()->with('error', $e->getMessage());
          }

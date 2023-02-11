@@ -65,6 +65,9 @@ class Validation
             'dob'=>['required', 'date', 'before:-18 years'],
             'gender'=>['required'], 
             'address'=>['required'],                        
+            'state_of_residence'=>['required'],                        
+            'nationality'=>['required'],                        
+            'state_of_origin'=>['required'],                        
         ], [
             'dob.before' => 'Next of kin must be older than 18 years'
         ]);    

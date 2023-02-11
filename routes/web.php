@@ -121,6 +121,7 @@ Route::group(['prefix'=>'admin'], function(){
     Route::get('/sales/{sale_id}/{user_id}', [AdminSalesController::class, 'viewSales'])->name('adminViewSales');
     Route::post('/sales', [AdminSalesController::class, 'confirmSale'])->name('confirmSale');
     Route::get('/comission', [AdminCommissionController::class, 'commission'])->name('adminCommission');
+    Route::post('/comission', [AdminCommissionController::class, 'payCommission'])->name('payCommission');
     Route::get('/support', [SupportController::class, 'adminsupportView'])->name('adminSupport');
     Route::get('/support/{id}', [SupportController::class, 'viewTicket'])->name('adminViewTicket');
     Route::patch('/support/{id}', [SupportController::class, 'markTicketAsClosed'])->name('adminMarkTicketAsClosed');

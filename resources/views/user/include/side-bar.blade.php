@@ -76,12 +76,12 @@
         ><i class="material-icons">equalizer</i><span>Sales</span></a
       >
     </li>
-    <!-- <li {{Request::is("*/comissions") ? 'active' : ''}}>
+    <li {{Request::is("*/comissions") ? 'active' : ''}}>
       <a class="nav-link" href="/user/comissions"
         ><i class="material-icons">credit_card</i
         ><span>Commissions</span></a
       >
-    </li> -->
+    </li>
     <li {{Request::is("*/supports") ? 'active' : ''}}>
       <a class="nav-link" href="/user/supports"
         ><i class="material-icons">headset_mic</i

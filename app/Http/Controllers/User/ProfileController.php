@@ -22,7 +22,6 @@ class ProfileController extends Controller
     public function __construct()
     {
         $this->validation = new Validation;
-        $this->user_status = new UserHelper;
     }
     public function getProfile()
     {
@@ -108,7 +107,7 @@ class ProfileController extends Controller
         try {
             NextOfKin::updateOrCreate(['user_id'=>Auth::id()], $data);
         } catch (Exception $e) {
-            return back()->with('error', 'Unable to create your data '.$e->getMessage());
+            return back()->with('error', 'Unable to create your data');
         }
 
         return back()->with('success', 'Next of kin updated successfully');

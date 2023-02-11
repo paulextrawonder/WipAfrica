@@ -32,7 +32,7 @@
                             class="dashboard__heading font-17"
                             style="line-height: 20px; margin-right: 10px"
                           >
-                            {{$count['realtors']}}
+                            {{$count['realtors'] ?? 0}}
                           </h2>
                         </div>
                         <div class="dashboard__icon-box">
@@ -50,7 +50,7 @@
                             class="dashboard__heading font-17"
                             style="line-height: 20px; margin-right: 10px"
                           >
-                            {{$count['supports']}}
+                            {{$count['supports'] ?? 0}}
                           </h2>
                         </div>
                         <div class="dashboard__icon-box">
@@ -68,7 +68,7 @@
                             class="dashboard__heading font-17"
                             style="line-height: 20px; margin-right: 10px"
                           >
-                            {{$count['projects']}}
+                            {{$count['projects'] ?? 0}}
                           </h2>
                         </div>
                         <div class="dashboard__icon-box">
@@ -84,7 +84,7 @@
                             class="dashboard__heading font-17"
                             style="line-height: 20px; margin-right: 10px"
                           >
-                            NGN <span>00,000,000,000</span>
+                            NGN <span>{{number_format($count['commission'], 2) ?? 0}}</span>
                           </h2>
                         </div>
                         <div class="dashboard__icon-box">
@@ -102,7 +102,7 @@
                             class="dashboard__heading font-17"
                             style="line-height: 20px; margin-right: 10px"
                           >
-                            {{$count['sales']}}
+                            {{$count['sales'] ?? 0}}
                           </h2>
                         </div>
                         <div class="dashboard__icon-box">
@@ -115,12 +115,12 @@
                     <div class="col-lg-4 col-md-6 mt-3">
                       <div class="dashboard__card">
                         <div class="dashboard__text-box">
-                          <p class="dashboard__text font-13">Wallet Balance</p>
+                          <p class="dashboard__text font-13">Confirmed Payments</p>
                           <h2
                             class="dashboard__heading font-17"
                             style="line-height: 20px; margin-right: 10px"
                           >
-                            00
+                          {{number_format($count['confirmed_payments'], 2) ?? 0}}
                           </h2>
                         </div>
                         <div class="dashboard__icon-box">

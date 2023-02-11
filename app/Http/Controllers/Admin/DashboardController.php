@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\AddPaymentToSales;
+use App\Models\Commission;
 use App\Models\Property;
 use App\Models\Sales;
 use App\Models\Support;
@@ -18,6 +19,8 @@ class DashboardController extends Controller
         $count['supports'] = Support::where('status', 'waiting')->orWhere('action','open')->count();
         $count['projects'] = Property::count();
         $count['sales'] = Sales::count();
+        $count['commission'] = Commission::where('status', 'Paid')->sum('commission_amount');
+        $count['confirmed_payments'] = AddPaymentToSales::where('status', 'Confirmed')->sum('added_amount');
 
         $sales = Sales::select(
             'sales.id',

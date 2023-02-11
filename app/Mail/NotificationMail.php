@@ -16,9 +16,12 @@ class NotificationMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $user;
+    public $data;
+    public function __construct($user, $data)
     {
-        //
+        $this->user = $user;
+        $this->data = $data;
     }
 
     /**
@@ -28,6 +31,8 @@ class NotificationMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.notification');
+        return $this->from(config('app.email_sender'), 'WipAfrica')
+        ->subject('Notification')
+        ->markdown('email.notification', ['user'=>$this->user, 'data'=>$this->data]);
     }
 }

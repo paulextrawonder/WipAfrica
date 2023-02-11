@@ -206,8 +206,8 @@
                           <td class="dashboard-table__data">
                             <input type="hidden" name="payment_id" value="{{$payment['id']}}">
                             <input type="hidden" name="user_id" value="{{$data['realtor']['id']}}">
-                            <input type="hidden" name="commission_percent" value="{{$payment['commission']}}">
                             <input type="hidden" name="commission" value="{{$payment['commission']}}">
+                            <input type="hidden" name="commission_amount" value="{{$payment['commission_amount']}}">
                             <div class="d-flex">
                               <select
                                 class="form-control font-12"

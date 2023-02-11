@@ -294,5 +294,8 @@
       </div>
     </div>
     @include('user.include.footer')
+    <script src="{{asset('assets/bundles/upload-preview/assets/js/jquery.uploadPreview.min.js')}}"></script>
+    <script src="{{asset('assets/bundles/jquery-selectric/jquery.selectric.min.js')}}"></script>
+    <script src="{{asset('assets/js/page/create-post.js')}}"></script>
   </body>
 </html>

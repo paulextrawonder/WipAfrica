@@ -62,7 +62,7 @@
                           <p class="wallet__title">
                             Amount Earned <span>&#8605;</span>
                           </p>
-                          <h3 class="wallet__amount">NGN 0</h3>
+                          <h3 class="wallet__amount">NGN {{number_format($data['amount_earned'], 2) ?? 0}}</h3>
                         </div>
                       </div>
                     </div>
@@ -75,7 +75,7 @@
                           <p class="wallet__title">
                             Paid Commission <span>&#8605;</span>
                           </p>
-                          <h3 class="wallet__amount">NGN 0</h3>
+                          <h3 class="wallet__amount">NGN {{number_format($data['paid_commission'], 2) ?? 0}}</h3>
                         </div>
                       </div>
                     </div>

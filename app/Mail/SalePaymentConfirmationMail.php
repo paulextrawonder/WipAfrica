@@ -16,9 +16,12 @@ class SalePaymentConfirmationMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $user;
+    public $data;
+    public function __construct($user, $data)
     {
-        //
+        $this->user = $user;
+        $this->data = $data;
     }
 
     /**
@@ -28,6 +31,8 @@ class SalePaymentConfirmationMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.sale_confirmation');
+        return $this->from(config('app.email_sender'), 'WipAfrica')
+        ->subject('Payment Confirmation')
+        ->markdown('email.sale_confirmation', ['user'=>$this->user, 'data'=>$this->data]);
     }
 }

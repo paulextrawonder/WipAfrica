@@ -47,17 +47,18 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($commissions as $commission)
                         <tr>
                           <td class="dashboard-table__data">
                             <p
                               class="dashboard-table__text d-block font-weight-600 font-12"
                             >
                               <a href="single-project.html">
-                                Magonal Estate | Apartments</a
+                                {{$commission->estate_name}} |  {{$commission->property_type}}</a
                               >
                             </p>
                             <span class="dashboard-table__span font-11"
-                              >2 Bedroom Apartment</span
+                              > {{$commission->property_name}}  {{$commission->property_type}}</span
                             >
                           </td>
 
@@ -65,137 +66,40 @@
                             <p
                               class="dashboard-table__text font-12 font-weight-600"
                             >
-                              Anyanwu Young
+                            {{$commission->client_full_name}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">
                             <p
                               class="dashboard-table__text font-12 font-weight-600"
                             >
-                              Direct Commission
+                            {{$commission->commission_type}}
                             </p>
                             <span class="dashboard-table__span font-11">
-                              Realtor: Alex Unusal</span
+                              <!-- Realtor: Alex Unusal</span -->
                             >
                           </td>
                           <td class="dashboard-table__data">
                             <p class="dashboard-table__text font-12">
-                              ₦10,000,000
+                              ₦ {{$commission->amount_paid}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">
                             <p class="dashboard-table__text font-12">
-                              ₦100,000
+                              ₦ {{$commission->commission_amount}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">
                             <button
                               class="btn btn-success font-weight-600 m-0 font-11"
                               data-toggle="modal"
-                              data-target="#commision-detail"
+                              data-target="#commision-detail-{{$commission->id}}"
                             >
                               View Details
                             </button>
                           </td>
                         </tr>
-                        <tr>
-                          <td class="dashboard-table__data">
-                            <p
-                              class="dashboard-table__text d-block font-weight-600 font-12"
-                            >
-                              <a href="single-project.html">
-                                Magonal Estate | Apartments</a
-                              >
-                            </p>
-                            <span class="dashboard-table__span font-11"
-                              >2 Bedroom Apartment</span
-                            >
-                          </td>
-
-                          <td class="dashboard-table__data">
-                            <p
-                              class="dashboard-table__text font-12 font-weight-600"
-                            >
-                              Anyanwu Young
-                            </p>
-                          </td>
-                          <td class="dashboard-table__data">
-                            <p
-                              class="dashboard-table__text font-12 font-weight-600"
-                            >
-                              Downline Level 1
-                            </p>
-                            <span class="dashboard-table__span font-11">
-                              Realtor: Miyim Jummai</span
-                            >
-                          </td>
-                          <td class="dashboard-table__data">
-                            <p class="dashboard-table__text font-12">
-                              ₦10,000,000
-                            </p>
-                          </td>
-                          <td class="dashboard-table__data">
-                            <p class="dashboard-table__text font-12">₦20,000</p>
-                          </td>
-                          <td class="dashboard-table__data">
-                            <button
-                              class="btn btn-success font-weight-600 m-0 font-11"
-                              data-toggle="modal"
-                              data-target="#commision-detail"
-                            >
-                              View Details
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="dashboard-table__data">
-                            <p
-                              class="dashboard-table__text d-block font-weight-600 font-12"
-                            >
-                              <a href="single-project.html">
-                                Magonal Estate | Apartments</a
-                              >
-                            </p>
-                            <span class="dashboard-table__span font-11"
-                              >2 Bedroom Apartment</span
-                            >
-                          </td>
-
-                          <td class="dashboard-table__data">
-                            <p
-                              class="dashboard-table__text font-12 font-weight-600"
-                            >
-                              Anyanwu Young
-                            </p>
-                          </td>
-                          <td class="dashboard-table__data">
-                            <p
-                              class="dashboard-table__text font-12 font-weight-600"
-                            >
-                              Downline Level 2
-                            </p>
-                            <span class="dashboard-table__span font-11">
-                              Realtor: Dayo Abiodun</span
-                            >
-                          </td>
-                          <td class="dashboard-table__data">
-                            <p class="dashboard-table__text font-12">
-                              ₦10,000,000
-                            </p>
-                          </td>
-                          <td class="dashboard-table__data">
-                            <p class="dashboard-table__text font-12">₦10,000</p>
-                          </td>
-                          <td class="dashboard-table__data">
-                            <button
-                              class="btn btn-success font-weight-600 m-0 font-11"
-                              data-toggle="modal"
-                              data-target="#commision-detail"
-                            >
-                              View Details
-                            </button>
-                          </td>
-                        </tr>
+                       @endforeach
                       </tbody>
                     </table>
                   </div>
@@ -204,10 +108,11 @@
             </div>
           </section>
 
+          @foreach ($commissions as $commission )
           <!-- Modal with form -->
           <div
             class="modal fade"
-            id="commision-detail"
+            id="commision-detail-{{$commission->id}}"
             tabindex="-1"
             role="dialog"
             aria-labelledby="formModal"
@@ -235,7 +140,7 @@
                       type="text"
                       class="form-control"
                       name="Project_name"
-                      value="Magonal Estate | Land | 500sqm"
+                      value="{{$commission->estate_name}} | {{$commission->property_type}} | {{$commission->property_name}}"
                       readonly
                     />
                   </div>
@@ -246,7 +151,7 @@
                       type="text"
                       class="form-control"
                       name="project_price"
-                      value="NGN35,000,000"
+                      value="{{$commission->amount}}"
                       readonly
                     />
                   </div>
@@ -256,7 +161,7 @@
                       type="text"
                       class="form-control"
                       name="project_units"
-                      value="1"
+                      value="{{$commission->no_of_unit}}"
                       readonly
                     />
                   </div>
@@ -266,7 +171,7 @@
                       type="text"
                       class="form-control"
                       name="total_price"
-                      value="NGN35,000,000"
+                      value="NGN{{$commission->amount}}"
                       readonly
                     />
                   </div>
@@ -276,11 +181,11 @@
                       type="text"
                       class="form-control"
                       name="project_price"
-                      value="NGN15,000,000"
+                      value="NGN{{$commission->amount_paid}}"
                       readonly
                     />
                   </div>
-                  <div class="form-group m-0 mb-3">
+                  <!-- <div class="form-group m-0 mb-3">
                     <label class="form__label">Pending Client's Balance</label>
                     <input
                       type="text"
@@ -289,14 +194,14 @@
                       value="NGN20,000,000"
                       readonly
                     />
-                  </div>
+                  </div> -->
                   <div class="form-group m-0 mb-3">
                     <label class="form__label">Commission Paid</label>
                     <input
                       type="text"
                       class="form-control"
                       name="Commission"
-                      value="NGN150,000"
+                      value="NGN{{$commission->commission_amount}}"
                       readonly
                     />
                   </div>
@@ -307,7 +212,7 @@
                       type="text"
                       class="form-control"
                       name="client_name"
-                      value="Anyanwu Young"
+                      value="{{$commission->client_full_name}}"
                       readonly
                     />
                   </div>
@@ -315,6 +220,7 @@
               </div>
             </div>
           </div>
+          @endforeach
         </div>
       </div>
     </div>

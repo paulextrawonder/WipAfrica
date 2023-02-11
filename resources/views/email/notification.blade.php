@@ -1,10 +1,14 @@
 @component('mail::message')
-# Introduction
+# Hi, {{$user['first_name']}}
 
-The body of your message.
+You have 1 new notification.
 
-@component('mail::button', ['url' => ''])
-Button Text
+<strong>{{$data['title']}}</strong>
+
+<em>{{$data['message']}}</em>
+
+@component('mail::button', ['url' => config('app.url').'/user/dashboard' ])
+View
 @endcomponent
 
 Thanks,<br>
