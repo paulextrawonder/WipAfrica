@@ -21,7 +21,7 @@
               name="email"
               type="email"
               class="form__input  @error('email') is-invalid @enderror"
-              value="{{ old('email') }}"
+              value="{{ $email ?? old('email') }}"
               readonly
               required
             />
