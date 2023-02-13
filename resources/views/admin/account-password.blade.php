@@ -37,6 +37,7 @@
                             class="form-control"
                             name="email"
                             id="email"
+                            readonly
                             value="{{Auth::guard('admin')->user()->email}}"
                             onblur="checkEmail(email)"
                           />
