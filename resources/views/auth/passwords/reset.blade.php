@@ -10,7 +10,7 @@
       <div class="login__container-img"></div>
       <div class="login__container-form">
         <img src="../../assets/img/logo.png" alt="" class="login__logo" />
-        <h2 class="login__title">Log in to your dashboard</h2>
+        <h2 class="login__title">PASSWORD RESET</h2>
 
         <form method="POST" action="{{ route('password.update') }}">
         @csrf
