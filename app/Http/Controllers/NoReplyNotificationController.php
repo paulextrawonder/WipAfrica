@@ -88,7 +88,7 @@ class NoReplyNotificationController extends Controller
 
     public function adminView()
     {
-        $data = Notifier::all();
+        $data = Notifier::orderBy('id', 'desc')->get();
 
         return view('admin.notification', compact('data'));
     }

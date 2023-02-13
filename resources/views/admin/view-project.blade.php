@@ -114,7 +114,7 @@
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">Commission</h6>
-                        <p class="project__info--text">NGN{{$property->commission}}</p>
+                        <p class="project__info--text">{{$property->commission}}%</p>
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">Account Name</h6>

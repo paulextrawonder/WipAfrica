@@ -1,6 +1,6 @@
 <footer class="footer">
       <p class="footer__text">
-        <center>© {{date("Y")}} Wip Africa Business Network. All rights reserved.</center>
+        <!-- <center>© {{date("Y")}} Wip Africa Business Network. All rights reserved.</center> -->
       </p>
     </footer>
 <!-- General JS Scripts -->
