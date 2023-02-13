@@ -194,6 +194,11 @@
         </form>
       </div>
     </main>
+    <footer class="footer">
+      <p class="footer__text">
+        <center>© {{date("Y")}} Wip Africa Business Network. All rights reserved.</center>
+      </p>
+    </footer>
  @include('user.include.footer')
  <script>
         $(function() {
