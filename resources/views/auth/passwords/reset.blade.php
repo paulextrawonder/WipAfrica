@@ -1,65 +1,65 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reset | WBN</title>
+    @include('user.include.header')
+    <link rel="stylesheet" href="../../assets/css/main.min.css" />
+  </head>
+  <body>
+    <div class="login__container">
+      <div class="login__container-img"></div>
+      <div class="login__container-form">
+        <img src="../../assets/img/logo.png" alt="" class="login__logo" />
+        <h2 class="login__title">Log in to your dashboard</h2>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('password.update') }}">
-                        @csrf
-
-                        <input type="hidden" name="token" value="{{ $token }}">
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Reset Password') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <form method="POST" action="{{ route('password.update') }}">
+        @csrf
+        <input type="hidden" name="token" value="{{ $token }}">
+          <div class="form__group">
+            <label class="form__label"> Email Address</label>
+            <input
+              name="email"
+              type="email"
+              class="form__input  @error('email') is-invalid @enderror"
+              value="{{ old('email') }}"
+              readonly
+              required
+            />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Password</label>
+            <input
+              name="password"
+              type="password"
+              placeholder="Enter Your Password"
+              class="form__input  @error('password') is-invalid @enderror"
+              required
+            />
+          </div>
+          <div class="form__group">
+            <label class="form__label">Confirm Password</label>
+            <input
+              name="password_confirmation"
+              type="password"
+              placeholder="Confirm Password"
+              class="form__input  @error('password') is-invalid @enderror"
+              required
+            />
+          </div>
+          <div class="form__group d-flex-h-center">
+            <label for="submit" class="main-btn main-btn-100"> RESET PASSWORD </label>
+            <input type="submit" class="form__input--submit" id="submit" />
+          </div>
+         
+        </form>
+      </div>
+      <img src="../../assets/img/form-bg.png" alt="" class="login__form-img" />
     </div>
-</div>
-@endsection
+    <footer class="footer">
+      <p class="footer__text">
+        <center>© {{date("Y")}} Wip Africa Business Network. All rights reserved.</center>
+      </p>
+    </footer>
+    @include('user.include.footer')
+  </body>
+</html>
