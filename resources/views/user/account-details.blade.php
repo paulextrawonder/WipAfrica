@@ -131,7 +131,7 @@
                             >Beneficiary Full Name</label
                           >
                           <input
-                            type="tel"
+                            type="text"
                             class="form-control"
                             placeholder=""
                             name="bank_beneficiary_name"
