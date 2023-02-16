@@ -240,7 +240,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 body {
   font-family: "poppins", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 *,
@@ -282,7 +282,7 @@ body {
 
 @media only screen and (max-width: 37.5em) {
   .dark-sidebar .main-sidebar .sidebar-menu li a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -442,6 +442,20 @@ a {
 @media only screen and (max-width: 37.5em) {
   .navbar-nav li .collapse-btn i {
     font-size: 1.6rem !important;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .sidebar-brand {
+    display: block;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .sidebar-brand .header-logo {
+    display: block;
+    margin-left: 2rem;
   }
 }
 

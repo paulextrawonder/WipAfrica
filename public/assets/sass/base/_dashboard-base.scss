@@ -1,7 +1,7 @@
 body {
   font-family: "poppins", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
 }
 *,
 *::before,
@@ -35,7 +35,7 @@ body {
   line-height: 21px;
   font-family: "Poppins", sans-serif !important;
   @include respond(phone) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   i {
@@ -181,5 +181,26 @@ div.dataTables_wrapper div.dataTables_paginate {
 .navbar-nav li .collapse-btn i {
   @include respond(phone) {
     font-size: 1.6rem !important;
+  }
+}
+
+// .header-logo {
+//   @include respond(phone) {
+//     margin-bottom: 4rem;
+//     height: 1rem;
+//     z-index: 10000;
+//   }
+// }
+
+.sidebar-brand {
+  @include respond(phone) {
+    display: block;
+    margin-bottom: 3rem;
+  }
+  .header-logo {
+    @include respond(phone) {
+      display: block;
+      margin-left: 2rem;
+    }
   }
 }
