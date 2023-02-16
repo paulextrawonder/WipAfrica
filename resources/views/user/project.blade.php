@@ -39,7 +39,7 @@
                         <div class="project__content-box">
                           <h6 class="project__heading">Total Amount</h6>
                           <p class="project__paragraph">
-                            NGN<span>{{$property->amount}}</span>
+                            NGN<span>{{number_format($property->amount)}}</span>
                           </p>
                         </div>
                         <div class="project__content-box">
@@ -51,7 +51,7 @@
                         <div class="project__content-box">
                           <h6 class="project__heading">Initial Deposit</h6>
                           <p class="project__paragraph">
-                            NGN<span>{{$property->down_payment}}</span>
+                            NGN<span>{{number_format($property->down_payment)}}</span>
                           </p>
                         </div>
                         <div class="project__content-box">

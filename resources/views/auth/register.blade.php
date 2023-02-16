@@ -137,7 +137,7 @@
           </div>
           <div class="form__group">
             <label for="state_country" class="form__label">
-              State of origin</label
+              State/Country of Residence</label
             >
             <input
               name="state_of_origin"
@@ -151,23 +151,28 @@
             <label for="password" class="form__label">
               Password</label
             >
+            <div style="position: relative">
             <input
               name="password"
               type="password"
               placeholder="*******"
               class="form__input form__input--reg"
+              onblur="checkLength(pass, 6, 25)"
+              id="password"
               value=""
+              required
             />
             <span
-                              class="form__icon--eye"
-                              style="bottom: 9px !important"
-                              onclick="togglePassword()"
-                            >
-                              <i id="eye-open" class="fas fa-eye"></i>
-                              <i id="eye-close" class="fas fa-eye-slash"></i>
-                            </span>
+              class="form__icon--eye"
+              style="bottom: 9px !important"
+              onclick="togglePassword()"
+            >
+              <i id="eye-open" class="fas fa-eye"></i>
+              <i id="eye-close" class="fas fa-eye-slash"></i>
+            </span>
           </div>
-          <div class="form__group">
+          </div>
+          <!-- <div class="form__group">
             <label for="idcard" class="form__label">
               Upload Valid means of Identification</label
             >
@@ -182,7 +187,7 @@
               value="identification"
               required
             />
-          </div>
+          </div> -->
 
           <div class="form__group d-flex-h-center">
             <button type="submit" class="main-btn" id="btn">CONTINUE</button>

@@ -77,16 +77,16 @@
                             </p>
                             <span class="dashboard-table__span font-11">
                               <!-- Realtor: Alex Unusal</span -->
-                            >
+                            
                           </td>
                           <td class="dashboard-table__data">
                             <p class="dashboard-table__text font-12">
-                              ₦ {{$commission->amount_paid}}
+                              ₦ {{number_format($commission->amount_paid)}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">
                             <p class="dashboard-table__text font-12">
-                              ₦ {{$commission->commission_amount}}
+                              ₦ {{number_format($commission->commission_amount)}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">
@@ -151,7 +151,7 @@
                       type="text"
                       class="form-control"
                       name="project_price"
-                      value="{{$commission->amount}}"
+                      value="{{number_format($commission->amount)}}"
                       readonly
                     />
                   </div>
@@ -171,7 +171,7 @@
                       type="text"
                       class="form-control"
                       name="total_price"
-                      value="NGN{{$commission->amount}}"
+                      value="NGN{{number_format($commission->amount)}}"
                       readonly
                     />
                   </div>
@@ -181,7 +181,7 @@
                       type="text"
                       class="form-control"
                       name="project_price"
-                      value="NGN{{$commission->amount_paid}}"
+                      value="NGN{{number_format($commission->amount_paid)}}"
                       readonly
                     />
                   </div>
@@ -201,7 +201,7 @@
                       type="text"
                       class="form-control"
                       name="Commission"
-                      value="NGN{{$commission->commission_amount}}"
+                      value="NGN{{number_format($commission->commission_amount)}}"
                       readonly
                     />
                   </div>

@@ -358,7 +358,7 @@
                       Total Project Price
                     </p>
                     <p class="form__label font-13">
-                      NGN<span>{{$sale['sales']->total_price}}</span>
+                      NGN<span>{{number_format($sale['sales']->total_price)}}</span>
                     </p>
                   </div>
                   <div class="d-block">
@@ -366,7 +366,7 @@
                       Amount Paid
                     </p>
                     <p class="form__label font-13">
-                      NGN<span>{{$sale['sales']->amount_paid}}</span>
+                      NGN<span>{{number_format($sale['sales']->amount_paid)}}</span>
                     </p>
                   </div>
                   <!-- <div class="d-block">
@@ -469,7 +469,7 @@
                       Total Project Price
                     </p>
                     <p class="form__label font-13">
-                      NGN<span>{{$data['sales']->total_price}}</span>
+                      NGN<span>{{number_format($data['sales']->total_price)}}</span>
                     </p>
                   </div>
 
@@ -488,7 +488,7 @@
                         @foreach($data['payments'] as $key=>$d)
                          <tr>
                           <th class="font-12" scope="row">{{$key + 1}}</th>
-                          <td class="font-12">NGN<span>{{$d['added_amount']}}</span></td>
+                          <td class="font-12">NGN<span>{{number_format($d['added_amount'])}}</span></td>
                           <td class="font-12 @if($d['balance'] ==  0) badge badge-success @endif">NGN<span>{{$d['balance']}}</span></td>
                           <td class="font-12">{{$d->created_at->format('d M Y')}}</td>
                          <td

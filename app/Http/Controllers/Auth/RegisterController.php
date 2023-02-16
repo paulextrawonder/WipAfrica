@@ -81,9 +81,9 @@ class RegisterController extends Controller
         $data['ref_link'] = config('app.url').'/register?ref='.$code;
         $data['password'] = Hash::make($data['password']);
 
-        $identification = 'id-'.$data['email'].'.'.$data['identification']->extension();
-        $data['identification']->move(public_path('users/identification/'), $identification);
-        $data['identification'] = $identification;
+        // $identification = 'id-'.$data['email'].'.'.$data['identification']->extension();
+        // $data['identification']->move(public_path('users/identification/'), $identification);
+        // $data['identification'] = $identification;
 
 
         try{

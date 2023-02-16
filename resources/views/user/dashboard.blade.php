@@ -203,12 +203,12 @@
 
                           <td class="dashboard-table__data">
                             <p class="dashboard-table__text font-weight-600">
-                              {{$property->amount}}
+                              {{number_format($property->amount)}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">
                             <p class="dashboard-table__text font-weight-600">
-                             {{$property->down_payment}}
+                             {{number_format($property->down_payment)}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">

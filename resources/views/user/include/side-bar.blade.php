@@ -17,13 +17,13 @@
         ><span>Dashboard</span></a
       >
     </li>
-    <li class="dropdown">
+    <li class="dropdown {{Request::is("*/profile*") ? 'active' : ''}}">
       <a class="nav-link has-dropdown" href="#"
         ><i class="material-icons">person_outline</i
         ><span>Profile</span></a
       >
-      <ul class="dropdown-menu">
-        <li {{Request::is("*/profile*") ? 'active' : ''}}>
+      <ul class="dropdown-menu" >
+        <li>
           <a class="nav-link" href="/user/profile" id="nav__dropdown"
             >My Profile</a
           >
@@ -54,35 +54,35 @@
         </li>
       </ul>
     </li>
-    <li {{Request::is("*/referer") ? 'active' : ''}}>
+    <li class="{{Request::is("*/referer") ? 'active' : ''}}">
       <a class="nav-link awesome" href="/user/referer"
         ><i class="fas fa-users"></i><span>Referrals</span></a
       >
     </li>
-    <li {{Request::is("*/notification") ? 'active' : ''}}>
+    <li class="{{Request::is("*/notifications") ? 'active' : ''}}">
       <a class="nav-link" href="/user/notifications"
         ><i class="material-icons">notifications</i
         ><span>Notification</span></a
       >
     </li>
-    <li {{Request::is("*/property") ? 'active' : ''}}>
+    <li class="{{Request::is("*/property") ? 'active' : ''}}">
       <a class="nav-link" href="/user/property"
         ><i class="material-icons">location_city</i
         ><span>Projects</span></a
       >
     </li>
-    <li {{Request::is("*/sales") ? 'active' : ''}}>
+    <li class="{{Request::is("*/sales") ? 'active' : ''}}">
       <a class="nav-link" href="/user/sales"
         ><i class="material-icons">equalizer</i><span>Sales</span></a
       >
     </li>
-    <li {{Request::is("*/comissions") ? 'active' : ''}}>
+    <li class="{{Request::is("*/comissions") ? 'active' : ''}}">
       <a class="nav-link" href="/user/comissions"
         ><i class="material-icons">credit_card</i
         ><span>Commissions</span></a
       >
     </li>
-    <li {{Request::is("*/supports") ? 'active' : ''}}>
+    <li class="{{Request::is("*/supports") ? 'active' : ''}}">
       <a class="nav-link" href="/user/supports"
         ><i class="material-icons">headset_mic</i
         ><span>Support</span></a

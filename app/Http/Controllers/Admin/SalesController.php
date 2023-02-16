@@ -79,11 +79,12 @@ class SalesController extends Controller
             'property_name',
             'property_type',
             'property_id',
-            'commission',
+            'properties.commission',
             )
         ->join('properties', 'properties.id', 'sales.property_id')
         ->join('users', 'users.id', 'sales.user_id')
         ->where('sales.user_id', $user_id)
+        ->where('sales.id', $sale_id)
         ->first();
 
         $realtor = User::where('id', $sales['user_id'])->first();
@@ -105,6 +106,16 @@ class SalesController extends Controller
         $data['payments'] = $payments;
 
      return view('admin.view-sale', compact('data'));
+    }
+
+    public function commissionAfterVAT($amount)
+    {
+        if(!$amount){
+            return back()->with('error', 'Amount must not be empty');
+        }
+
+        $vat = 7.5/100;
+        return $vat * $amount;
     }
 
     public function confirmSale(Request $request)
@@ -136,10 +147,13 @@ class SalesController extends Controller
                 $realtor_commisson['sale_id'] = $payment['sales_id']; 
                 $realtor_commisson['payment_id'] = $data['payment_id']; 
                 $realtor_commisson['amount_paid'] = $payment['added_amount']; 
-                $realtor_commisson['commission'] = $data['commission']; 
-                $realtor_commisson['commission_amount'] =(($data['commission']/100)*$payment['added_amount']); 
+                $realtor_commisson['commission'] = $data['commission'];  
                 $realtor_commisson['commission_type'] = 'Direct Commission'; 
                 $realtor_commisson['status'] = 'Pending'; 
+
+                $comm1 = (($data['commission']/100)*$payment['added_amount']);
+
+                $realtor_commisson['commission_amount'] = $comm1 - $this->commissionAfterVAT($comm1);
 
                 Commission::create($realtor_commisson);
 
@@ -150,10 +164,13 @@ class SalesController extends Controller
                     $direct_ref['sale_id'] = $payment['sales_id'];  
                     $direct_ref['payment_id'] = $data['payment_id']; 
                     $direct_ref['amount_paid'] = $payment['added_amount']; 
-                    $direct_ref['commission'] = 10; 
-                    $direct_ref['commission_amount'] =(($direct_ref['commission']/100)*$payment['added_amount']); 
+                    $direct_ref['commission'] = 2; 
                     $direct_ref['commission_type'] = 'First Level Commission'; 
                     $direct_ref['status'] = 'Pending'; 
+
+                    $comm2 = (($direct_ref['commission']/100)*$payment['added_amount']);
+
+                    $direct_ref['commission_amount'] = $comm2 - $this->commissionAfterVAT($comm2); 
 
                     Commission::create($direct_ref);
 
@@ -165,10 +182,13 @@ class SalesController extends Controller
                         $first_level['sale_id'] = $payment['sales_id']; 
                         $first_level['payment_id'] = $data['payment_id']; 
                         $first_level['amount_paid'] = $payment['added_amount']; 
-                        $first_level['commission'] = 2; 
-                        $first_level['commission_amount'] =(($first_level['commission']/100)*$payment['added_amount']); 
+                        $first_level['commission'] = 1; 
                         $first_level['commission_type'] = 'Second Level Commission'; 
                         $first_level['status'] = 'Pending';
+
+                        $comm3 = (($first_level['commission']/100)*$payment['added_amount']);
+
+                        $first_level['commission_amount'] = $comm3 - $this->commissionAfterVAT($comm3);
 
                         Commission::create($first_level);
                     }

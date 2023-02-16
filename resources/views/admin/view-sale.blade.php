@@ -72,20 +72,20 @@
                       <p class="details__text details__text-bold font-14">
                         Project Price Total
                       </p>
-                      <p class="details__text font-13">NGN{{$data['sales']['total_price']}}</p>
+                      <p class="details__text font-13">NGN{{number_format($data['sales']['total_price'])}}</p>
                     </div>
 
                     <div class="details__text-box">
                       <p class="details__text details__text-bold font-14">
                         Amount Paid So Far
                       </p>
-                      <p class="details__text font-13">NGN{{$data['sales']['total_amount_paid']}}</p>
+                      <p class="details__text font-13">NGN{{number_format($data['sales']['total_amount_paid'])}}</p>
                     </div>
                     <div class="details__text-box">
                       <p class="details__text details__text-bold font-14">
                         Total Payment Balance
                       </p>
-                      <p class="details__text font-13">NGN{{$data['sales']['balance_to_be_paid']}}</p>
+                      <p class="details__text font-13">NGN{{number_format($data['sales']['balance_to_be_paid'])}}</p>
                     </div>
                     <div class="details__text-box">
                       <p class="details__text details__text-bold font-14">
@@ -176,17 +176,17 @@
                             <p
                               class="dashboard-table__text d-block font-weight-600 font-12"
                             >
-                              NGN<span>{{$payment['added_amount']}}</span>
+                              NGN<span>{{number_format($payment['added_amount'])}}</span>
                             </p>
                             <span class="dashboard-table__span font-11"
                               >Commission <span>({{$payment['commission']}}%)</span> |
-                              <span>NGN{{$payment['commission_amount']}}</span></span
+                              <span>NGN{{number_format($payment['commission_amount'])}}</span></span
                             >
                           </td>
 
                           <td class="dashboard-table__data">
                             <a
-                              href="{{asset('assets/properties')}}/{{$payment['payment_proof']}}"
+                              href="{{asset('properties/payment_proof')}}/{{$payment['payment_proof']}}"
                               class="btn btn-success font-weight-600 m-0 font-11"
                               download
                             >

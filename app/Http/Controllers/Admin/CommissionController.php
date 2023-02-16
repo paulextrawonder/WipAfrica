@@ -9,6 +9,13 @@ use Illuminate\Http\Request;
 
 class CommissionController extends Controller
 {
+
+    public function commissionAfterVAT($amount)
+    {
+        $vat = 7.5/100;
+        return $vat * $amount;
+    }
+    
     public function commission()
     {
         $commissions = Commission::select(

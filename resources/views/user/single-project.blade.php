@@ -66,7 +66,7 @@
                   <div class="project__details">
                     <div class="project__details--heading">More Details</div>
                     <div class="project__details--body">
-                      Direct cash ready clients <br /><br />{{$property->description}} <br /><br />
+                      <p align="jestify" style="margin-top: 0;"><br />{{$property->description}} <br /><br /></p>
                     </div>
                     <a
                       href="{{asset('properties/form/'.$property->form)}}"
@@ -106,11 +106,11 @@
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">Total Price</h6>
-                        <p class="project__info--text">NGN{{$property->amount}}</p>
+                        <p class="project__info--text">NGN{{number_format($property->amount)}}</p>
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">Down Payment</h6>
-                        <p class="project__info--text">NGN{{$property->down_payment}}</p>
+                        <p class="project__info--text">NGN{{number_format($property->down_payment)}}</p>
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">

@@ -180,7 +180,7 @@
                         @if(++$key == 1)
                         <td class="dashboard-table__data">
                           <p class="dashboard-table__text font-weight-600">
-                            NGN<span>{{$data['payments']['added_amount']}}</span>
+                            NGN<span>{{number_format($data['payments']['added_amount'])}}</span>
                           </p>
                           <span
                             class="dashboard-table__span font-11 text-danger"

@@ -130,10 +130,10 @@
                             {{$commission->commission_type}}
                             </p>
                             <span class="dashboard-table__span font-11">
-                            {{$commission->commission}}% | ₦{{$commission->commission_amount}}</span
+                            {{$commission->commission}}% | ₦{{number_format($commission->commission_amount)}}</span
                             >
                             <p class="dashboard-table__text font-11">
-                              Client Paid: ₦{{$commission->amount_paid}}
+                              Client Paid: ₦{{number_format($commission->amount_paid)}}
                             </p>
                           </td>
                           <td class="dashboard-table__data">
