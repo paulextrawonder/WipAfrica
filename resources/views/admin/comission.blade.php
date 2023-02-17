@@ -73,7 +73,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach($commissions as $commission)
+                        @foreach($commissions as $key=>$commission)
                         <tr>
                           <input type="hidden" name="ids[]" value="{{$commission['id']}}">
                           <td class="p-0 text-center">
@@ -82,11 +82,11 @@
                                 type="checkbox"
                                 data-checkboxes="mygroup"
                                 class="custom-control-input"
-                                id="checkbox-1"
+                                id="checkbox-{{++$key}}"
                                 name="check[]"
                               />
                               <label
-                                for="checkbox-1"
+                                for="checkbox-{{$key}}"
                                 class="custom-control-label"
                                 >&nbsp;</label
                               >

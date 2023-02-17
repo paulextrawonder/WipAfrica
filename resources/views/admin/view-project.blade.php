@@ -59,8 +59,8 @@
                   </div>
                   <div class="project__details">
                     <div class="project__details--heading">More Details</div>
-                    <div class="project__details--body">
-                      Direct cash ready clients <br /><br />{{$property->description}} <br /><br />
+                    <div class="project__details--body" style="text-align: justify; font-size:12px">
+                      {!! $property->description !!} <br /><br />
                     </div>
                     <a
                       href="{{asset('properties/form/'.$property->form)}}"

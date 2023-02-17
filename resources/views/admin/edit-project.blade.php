@@ -2,6 +2,16 @@
 <html lang="en">
   <head>
     <title>Upload Projects | Administrative Dashboard</title>
+
+    <link
+      rel="stylesheet"
+      href="{{asset('assets/bundles/summernote/summernote-bs4.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{asset('assets/bundles/jquery-selectric/selectric.css')}}"
+    />
+
     @include('admin.include.header')
   </head>
 
@@ -204,7 +214,7 @@
                         value="{{old('form')}}"
                       />
                     </div>
-                    <div class="form-group m-0 mb-3">
+                    <!-- <div class="form-group m-0 mb-3">
                       <label class="form__label">About Project</label>
                       <textarea
                         class="form-control"
@@ -214,7 +224,22 @@
                       >
                       {{$property->description ?? old('description')}}
                     </textarea>
-                    </div>
+                    </div> -->
+
+                    <div class="inbox-reply mt-5">
+                          <div class="form-group mb-4">
+                            <label class="form__label">Project Description</label>
+                            <textarea
+                              class="summernote-simple"
+                              name="description"
+                              required > {!! $property->description ?? old('description') !!}
+                          </textarea>
+                          </div>
+                          <div class="form-group m-0 mb-3">           
+                          </div>
+                      </div>
+
+
                     <div class="form-group m-0 mb-3">
                       <label
                         for="submit__form"
@@ -232,5 +257,13 @@
       </div>
     </div>
     @include('admin.include.script')
+
+            <!-- JS Libraies -->
+            <script src="{{asset('assets/bundles/summernote/summernote-bs4.js')}}"></script>
+    <script src="{{asset('assets/bundles/jquery-selectric/jquery.selectric.min.js')}}"></script>
+    <script src="{{asset('assets/bundles/upload-preview/assets/js/jquery.uploadPreview.min.js')}}"></script>
+    <script src="{{asset('assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js')}}"></script>
+    <script src="{{asset('assets/js/page/create-post.js')}}"></script>
+    <script src="{{asset('assets/js/page/chat.js')}}"></script>
   </body>
 </html>
