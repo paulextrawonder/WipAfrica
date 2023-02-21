@@ -141,7 +141,7 @@
                     <div class="form-group m-0 mb-3">
                       <label class="form__label">Total Price</label>
                       <input
-                        type="text"
+                        type="number"
                         class="form-control"
                         name="amount"
                         value="{{old('amount')}}"
@@ -151,7 +151,7 @@
                     <div class="form-group m-0 mb-3">
                       <label class="form__label">Down Payment</label>
                       <input
-                        type="text"
+                        type="number"
                         class="form-control"
                         name="down_payment"
                         value="{{old('down_payment')}}"
