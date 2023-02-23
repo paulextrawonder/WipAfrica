@@ -106,7 +106,7 @@ class Validation
         // }
 
         $validated = $data->validate([
-            'property_name'=>['required', 'unique:properties'],
+            'property_name'=>['required'],
             'estate_name'=>['required'],
             'estate_logo'=>['required'],
             'amount'=>['required'],
@@ -116,18 +116,15 @@ class Validation
             'location'=>['required'],
             'property_type'=>['required'],
             'description'=>['required'],
-            'image_1'=>['required', 'mimes:jpg,jpeg,png', 'max:6144'],
-            'image_2'=>['required', 'mimes:jpg,jpeg,png', 'max:6144'],
-            'image_3'=>['required', 'mimes:jpg,jpeg,png', 'max:6144'],
-            'image_4'=>['required', 'mimes:jpg,jpeg,png', 'max:6144'],
-            'form'=>['mimes:jpg,jpeg,png,pdf','max:6144'],
-            'flier'=>['mimes:jpg,jpeg,png,pdf','max:6144'],
+            'image_1'=>['required', 'mimes:jpg,jpeg,png'],
+            'image_2'=>['required', 'mimes:jpg,jpeg,png'],
+            'image_3'=>['required', 'mimes:jpg,jpeg,png'],
+            'image_4'=>['required', 'mimes:jpg,jpeg,png'],
+            'form'=>['mimes:jpg,jpeg,png,pdf'],
+            'flier'=>['mimes:jpg,jpeg,png,pdf'],
              
             'brochure'=>['mimes:jpg,jpeg,png,pdf'],
             'promo_price'=>[''],
-        ],
-        [
-            'property_name.unique'=>'Opps, looks like this property name already exist'
         ]);
 
         return $validated;
