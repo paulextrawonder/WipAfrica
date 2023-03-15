@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
@@ -36,7 +37,9 @@ class AppServiceProvider extends ServiceProvider
             'profile_pic'
             )->where('id', Auth::id())->first();
 
-            $view->with('key_data', $key_data);
+            $sett = Setting::first();
+
+            $view->with(['key_data'=> $key_data, 'sett'=>$sett]);
         });
     }
 }

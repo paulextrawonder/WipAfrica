@@ -124,15 +124,15 @@
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">Account Name</h6>
-                        <p class="project__info--text">WIP AFRICA</p>
+                        <p class="project__info--text">{{$sett->account_name}}</p>
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">Account Number</h6>
-                        <p class="project__info--text">0102938394</p>
+                        <p class="project__info--text">{{$sett->account_no}}</p>
                       </div>
                       <div class="d-group">
                         <h6 class="project__info--heading">Bank Name</h6>
-                        <p class="project__info--text">Access Bank</p>
+                        <p class="project__info--text">{{$sett->bank_name}}</p>
                       </div>
                     </div>
                   </div>
